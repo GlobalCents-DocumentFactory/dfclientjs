@@ -92,8 +92,9 @@ export class AppComponent implements AfterViewInit {
       }
     }
 
-    await this.dfsvc.StartPipeline(ppl);
-    //this.pipelining = false;
+    await this.dfsvc.StartPipeline(ppl).then(()=>{
+      this.pipelining = false;
+    });
 
   }
 

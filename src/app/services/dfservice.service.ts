@@ -9,6 +9,7 @@ import { CollectresultsService } from './collectresults.service';
 
 const creds = `SUAMCB5PRHKKQ44QS674C3UDVUHF2RTPTT2JM3KW4KMDKLYVMN2XQNQYVQ`;
 const servername = "nats-server";
+const serverurl = 'ws://localhost:8088';
 
 @Injectable({
   providedIn: 'root'
@@ -24,10 +25,10 @@ export class DfserviceService {
     const auth = nkeyAuthenticator(new TextEncoder().encode(creds));
     wsconnect({
       name: 'app',
-      servers: ['ws://localhost:8088'],
+      servers: [serverurl],
       authenticator: auth,
     }).then((nc) => {
-      console.log("Connected to NATS server");
+      console.log("Connected to DocumentFactory server");
       this._nc = nc;
       this._objm = new Objm(this._nc);
       this._js = jetstream(this._nc);
@@ -37,7 +38,7 @@ export class DfserviceService {
       this._kv = new Kvm(this._nc);
 
     }).catch((err) => {
-      console.error("Error connecting to NATS server", err);
+      console.error("Error connecting to DocumentFactory server", err);
       return undefined;
     });
   }
@@ -49,7 +50,7 @@ export class DfserviceService {
   }
   async UploadFile(bucket: string, fileID: string, file: File, mimetype?: string): Promise<ObjectInfo> {
     if (!this._objm) {
-      throw new Error("NATS Object Manager not initialized");
+      throw new Error("DocumentFactory Object Manager not initialized");
     }
     let store: ObjectStore;
     try {
@@ -73,7 +74,7 @@ export class DfserviceService {
   // Equivalent to Go's GetFile
   async DownloadFile(bucket: string, fileID: string): Promise<Blob> {
     if (!this._objm) {
-      throw new Error("NATS Object Manager not initialized");
+      throw new Error("DocumentFactory Object Manager not initialized");
     }
     // Open existing object store
     const store = await this._objm.open(bucket);
