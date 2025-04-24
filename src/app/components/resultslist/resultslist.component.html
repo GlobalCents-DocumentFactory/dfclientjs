@@ -1,0 +1,5 @@
+<nz-list nzBordered nzSize="small">
+    @for (item of artifacts; track item) {
+    <nz-list-item>{{ item?.asset?.name || '' }}</nz-list-item>
+    }
+</nz-list>

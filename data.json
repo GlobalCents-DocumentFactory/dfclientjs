@@ -1,0 +1,93 @@
+{
+    "customdata": null,
+    "id": "nikeebyfc0jjh6jzxgj1q",
+    "output": {
+        "asset": {
+            "artifactcs": null,
+            "artifactfs": null,
+            "artifactnats": null,
+            "artifacts3": null,
+            "artifactsharepoint": null,
+            "id": "f0n7couo5wexq8l0rixi0",
+            "mimetype": "",
+            "name": "",
+            "shouldbeprocessed": true,
+            "storetype": "nats"
+        },
+        "children": [
+            {
+                "asset": {
+                    "artifactcs": null,
+                    "artifactfs": null,
+                    "artifactnats": {
+                        "bucket": "nikeebyfc0jjh6jzxgj1q",
+                        "natsid": "vkxth5oarorq2v3ntkk8q",
+                        "storesettingsnats": {
+                            "inmemory": true,
+                            "privatekey": "SUAMCB5PRHKKQ44QS674C3UDVUHF2RTPTT2JM3KW4KMDKLYVMN2XQNQYVQ",
+                            "publickey": "UAWEEECHAJZUZGOOOI6N5TDJK7ZHXYG5IW2SZ6KK7EVHAXAK64RC4ICR",
+                            "servername": "nats-server",
+                            "url": "nats://127.0.0.1:4222"
+                        }
+                    },
+                    "artifacts3": null,
+                    "artifactsharepoint": null,
+                    "id": "1h0r1yonxqq3tfk9erlgf",
+                    "mimetype": "application/pdf",
+                    "name": "Project Charter.pdf",
+                    "shouldbeprocessed": true,
+                    "storetype": "nats"
+                },
+                "children": [],
+                "clientinfo": {
+                    "fullname": "Project Charter.doc",
+                    "id": null,
+                    "iscontainer": false,
+                    "metadata": null,
+                    "mimetype": "application/msword",
+                    "parentid": null,
+                    "recursive": false,
+                    "shortname": "Project Charter.doc"
+                },
+                "id": "vkxth5oarorq2v3ntkk8q",
+                "level": 0,
+                "metadata": "{\r\n  \"props\": {\r\n    \"Author\": \"Natasha Baker\",\r\n    \"Characters\": \"2127\",\r\n    \"CharactersWithSpaces\": \"2496\",\r\n    \"Company\": \"Hewlett-Packard\",\r\n    \"CreateTime\": \"19/12/2013 20:04:00\",\r\n    \"HeadingPairs\": \"System.Object[]\",\r\n    \"HyperlinksChanged\": \"False\",\r\n    \"Keywords\": \"\",\r\n    \"LastPrinted\": \"21/08/2008 20:59:00\",\r\n    \"LastSavedBy\": \"Mariann Carozza\",\r\n    \"LastSavedTime\": \"15/06/2016 18:46:00\",\r\n    \"Lines\": \"17\",\r\n    \"LinksUpToDate\": \"False\",\r\n    \"NameOfApplication\": \"Microsoft Office Word\",\r\n    \"Pages\": \"4\",\r\n    \"Paragraphs\": \"4\",\r\n    \"RevisionNumber\": \"7\",\r\n    \"ScaleCrop\": \"False\",\r\n    \"Security\": \"0\",\r\n    \"SharedDoc\": \"False\",\r\n    \"Subject\": \"\",\r\n    \"Template\": \"Normal\",\r\n    \"Title\": \"\",\r\n    \"TitlesOfParts\": \"System.String[]\",\r\n    \"TotalEditingTime\": \"31\",\r\n    \"Version\": \"786432\",\r\n    \"Words\": \"373\",\r\n    \"Creator\": \"Microsoft Office Word\",\r\n    \"Producer\": \"Aspose.Words for .NET 25.4.0\",\r\n    \"CreationDate\": \"D:20131219200400Z\",\r\n    \"ModDate\": \"D:20160615184600Z\"\r\n  }\r\n}",
+                "ordering": 0,
+                "Ordering": 0,
+                "pplid": "nikeebyfc0jjh6jzxgj1q",
+                "split": false,
+                "Split": false,
+                "statusinfo": {
+                    "datasize": 0,
+                    "errordetails": [],
+                    "status": "Completed",
+                    "statusmsg": "Artifact saved to nats",
+                    "timing": 37
+                }
+            }
+        ],
+        "clientinfo": null,
+        "id": "88azmtt1uft6cw8j9fzr9",
+        "level": 0,
+        "metadata": "{}",
+        "ordering": 0,
+        "Ordering": 0,
+        "pplid": "nikeebyfc0jjh6jzxgj1q",
+        "split": false,
+        "Split": false,
+        "statusinfo": {
+            "datasize": 0,
+            "errordetails": [],
+            "status": "Pending",
+            "statusmsg": "Pending",
+            "timing": 0
+        }
+    },
+    "runid": null,
+    "statusinfo": {
+        "errordetails": [],
+        "status": "Completed",
+        "statusmsg": "Workflow completed",
+        "timing": 4331
+    }
+}
