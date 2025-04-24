@@ -7,12 +7,25 @@
   </div>
   <div class="column" style="text-align: left;" nz-col nzSpan="8">
 
-    <button style="margin: 4px;" nz-button nzType="primary" [disabled]="fileList.length === 0 || pipelining" (click)="Process($event)">
+    <button style="margin: 4px;" nz-button nzType="primary" [disabled]="fileList.length === 0 || pipelining"
+      (click)="Process($event)">
       {{ pipelining ? 'Pipelining...' : 'Run Pipeline' }}
     </button>
   </div>
   <div class="column" nz-col nzSpan="8">
   </div>
+  <div nz-col nzSpan="4"></div>
+</div>
+
+
+<div nz-row [nzGutter]="[4, 4]">
+  <div nz-col nzSpan="4">
+
+  </div>
+  <div class="column" nz-col nzSpan="16">
+    <app-resultslist></app-resultslist>
+  </div>
+ 
   <div nz-col nzSpan="4"></div>
 </div>
 
@@ -45,8 +58,7 @@
 
   </div>
   <div style="border: 1px solid gray;" nz-col nzSpan="8">
-    <!-- <wfic-acefield [(ngModel)]="pipeline" mode="json"></wfic-acefield> -->
-    <nz-code-editor style="height: 600px" [(ngModel)]="pipeline" [nzEditorOption]="editorOptions"></nz-code-editor>
+    <nz-code-editor style="height: 500px" [(ngModel)]="pipeline" [nzEditorOption]="editorOptions"></nz-code-editor>
   </div>
   <div nz-col nzSpan="4"></div>
 </div>

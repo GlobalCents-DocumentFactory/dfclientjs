@@ -9,10 +9,11 @@ import { Utils } from './utils/utils';
 import { Artifact, Asset, Convert, Pipeline, Storetype } from './model/model';
 import { FormsModule } from '@angular/forms';
 import { NzCodeEditorModule } from 'ng-zorro-antd/code-editor';
+import { ResultslistComponent } from './components/resultslist/resultslist.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NzButtonModule, NzUploadModule, NzIconModule, NzGridModule, FormsModule, NzCodeEditorModule],
+  imports: [NzButtonModule, NzUploadModule, NzIconModule, NzGridModule, FormsModule, NzCodeEditorModule, ResultslistComponent],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -31,7 +32,8 @@ export class AppComponent implements AfterViewInit {
   pipelining = false;
 
   editorOptions = {
-    language: 'json'
+    language: 'json',
+    theme: 'vs-dark'
   }
 
   pipeline = `{
@@ -91,7 +93,7 @@ export class AppComponent implements AfterViewInit {
     }
 
     await this.dfsvc.StartPipeline(ppl);
-    this.pipelining = false;
+    //this.pipelining = false;
 
   }
 
