@@ -4,10 +4,11 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { Artifact, StatusInfo } from '../../model/model';
 import { DfserviceService } from '../../services/dfservice.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-resultslist',
-  imports: [NzButtonModule, NzListModule],
+  imports: [NzButtonModule, NzListModule, CommonModule],
   templateUrl: './resultslist.component.html',
   styleUrl: './resultslist.component.scss'
 })
