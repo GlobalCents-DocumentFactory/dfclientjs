@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { nanos, NatsConnection, nkeyAuthenticator } from "@nats-io/nats-core";
 import { wsconnect } from "@nats-io/nats-core";
 import { ObjectInfo, ObjectStore, ObjectStoreMeta, Objm } from "@nats-io/obj";
@@ -21,6 +22,8 @@ export class DfserviceService {
   private _js: JetStreamClient | undefined;
   private _jsm: JetStreamManager | undefined;
   private _kv: Kvm | undefined;
+  private _serverStatus = new BehaviorSubject<'connected' | 'connecting' | 'error'>('connecting');
+  public serverStatus$ = this._serverStatus.asObservable();
 
   constructor(private cresultsvc: CollectresultsService) {
     const auth = nkeyAuthenticator(new TextEncoder().encode(creds));
@@ -37,9 +40,11 @@ export class DfserviceService {
         this._jsm = jsm;
       });
       this._kv = new Kvm(this._nc);
+      this._serverStatus.next('connected');
 
     }).catch((err) => {
       console.error("Error connecting to DocumentFactory server", err);
+      this._serverStatus.next('error');
       return undefined;
     });
   }

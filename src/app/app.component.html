@@ -13,6 +13,12 @@
     </button>
   </div>
   <div class="column" nz-col nzSpan="8">
+    <nz-tag [nzColor]="serverStatus === 'connected' ? 'green' : (serverStatus === 'error' ? 'red' : 'orange')">
+        Server: {{ serverStatus }}
+    </nz-tag>
+    <nz-tag [nzColor]="pipelining ? 'blue' : 'grey'">
+        Pipeline: {{ pipelining ? 'Running' : 'Idle' }}
+    </nz-tag>
   </div>
   <div nz-col nzSpan="4"></div>
 </div>
